@@ -1,7 +1,4 @@
-def printTree():
-    root = "src"
-    directories = ["components", "api", "views"]
-
+def printTree(root: str, directories: list):
     output = f"{root}/\n"
     directory = directories.pop(0)
     while directories:
@@ -12,4 +9,8 @@ def printTree():
     print(output)
 
 if __name__ == '__main__':
-    printTree()
+    sample_data = {
+        "root": "src",
+        "directories": ["components", "api", "views"]
+    }
+    printTree(**sample_data)
