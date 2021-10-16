@@ -1,11 +1,15 @@
-root = "src"
-directories = ["components", "api", "views"]
+def printTree():
+    root = "src"
+    directories = ["components", "api", "views"]
 
-output = f"{root}/\n"
-directory = directories.pop(0)
-while directories:
-    output += f"│\n├── {directory}/\n"
+    output = f"{root}/\n"
     directory = directories.pop(0)
-output += f"│\n└── {directory}/\n"
+    while directories:
+        output += f"│\n├── {directory}/\n"
+        directory = directories.pop(0)
+    output += f"│\n└── {directory}/\n"
 
-print(output)
+    print(output)
+
+if __name__ == '__main__':
+    printTree()
