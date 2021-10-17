@@ -8,9 +8,7 @@ def printTree(root: str, directories: list):
 
     print(output)
 
-if __name__ == '__main__':
-    sample_data = {
-        "root": "src",
-        "directories": ["components", "api", "views"]
-    }
+
+if __name__ == "__main__":
+    sample_data = {"root": "src", "directories": ["components", "api", "views"]}
     printTree(**sample_data)
